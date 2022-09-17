@@ -1,17 +1,18 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import MovieList from './components/MovieList.jsx'
 
 export default function App() {
-  const [movies,setMovies] = useState([
+  const [movies, setMovies] = useState([
     {
-      Title:'Star wars',
+      Title: 'Star wars',
       Year: 1982,
       imdbID: 'tt0076759',
       Type: 'movie',
       Poster: 'https://media.timeout.com/images/105863223/750/422/image.jpg'
     },
     {
-      Title:'Family guy',
+      Title: 'Family guy',
       Year: 1982,
       imdbID: 'tt0076759',
       Type: 'movie',
@@ -19,8 +20,8 @@ export default function App() {
     }
   ])
   return (
-    <div>
-      React ⚛️ + Vite ⚡ + Replit 🌀
+    <div className='container-fluid'>
+      <MovieList movies={movies} />
     </div>
   )
 }
